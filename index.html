@@ -1,118 +1,86 @@
-
+<!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-	<meta charset="utf-8">
-	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<title>Ediel</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/flat-ui/2.2.2/css/flat-ui.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/flat-ui/2.2.2/js/flat-ui.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
 </head>
-<body>
-	<div class="container">
-		<div class="jumbotron">
-		  <h1>APLICACIONES WEB PARA GESTIÓN DE PROYECTOS</h1>
-	
-		</div>
-		<div class="row">
-			<div class="col-md-4">
-				<div class="panel panel-default panel-primary">
-				  <div class="panel-body">
-				<p><b>Trac:</b> es un software libre que permite el seguimiento de errores y bugs, que provee herramientas como Timeline y Roadmap, además de permitir establecer diversos perfiles de usuarios y facilitar la delegación de tareas a los participantes de un proyecto.</p>
-				</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="panel panel-default panel-primary">
-				  <div class="panel-body">
-				<p><b>Basecamp:</b> es una herramienta paga, muy útil para proyectos genéricos, siendo ideal para realizar seguimientos a actividades de cara a clientes. Permite crear tareas, notificaciones automáticas por correo, marcar hitos en un calendario y adjuntar archivos. La simplicidad en la gestión y una interfaz directa, son su principal atractivo. Sólo vale la pena su uso en caso de manejar cierto número de proyectos concurrentes.</p>
-				</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="panel panel-default panel-primary">
-				  <div class="panel-body">
-				<p><b>Redmine:</b> es un software libre, muy similar a Trac, que permite soportar múltiples proyectos, roles flexibles basados en el control de acceso, administración de noticias, documentos y archivos; notificaciones por correo electrónico y soporta distintas bases de datos, etc. Además, incluye Diagramas de Gantt, calendario, foros por proyecto y wikis. Su administración es bastante sencilla y permite establecer flujos de trabajo para una mejor gestión de proyectos.</p>
-				</div>
-				</div>
-			</div>
-		</div>
+<body onload="init()">
+	<nav id="mainNav" class="navbar navbar-fixed-top navbar-inverse navbar-embossed">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#">EdielWebSite</a>
+            </div>
 
-		<div class="row">
-			<div class="col-md-4">
-				<div class="panel panel-default panel-primary">
-				  <div class="panel-body">
-				<p><b>HiTask:</b> sirve como administrador de tareas, así como para compartir archivos y crear informes basados en el tiempo o productividad. La interfaz y la forma de empleo es intuitiva, y dispone de servicio para móviles. Vale aclarar que para, acceder a las opciones de trabajo en equipo, hay que pagar una suscripción mensual.</p>
-				</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="panel panel-default panel-primary">
-				  <div class="panel-body">
-				<p><b>Teambox:</b> del cual está por salir la versión 4, posibilita la gestión de varios proyectos a la vez en equipos de trabajo y empresas de cualquier tamaño. Posee una versión gratuita para gestionar hasta tres proyectos. Dispone de chat, lista de tareas, paginas para proponer ideas, inserción de archivos, time tracking y herramientas sociales. Además permite la integración con google docs, google calendar, dropbox y tiene extensiones para Chrome. Una de sus desventajas es que no permite asignar tareas a más de una persona.</p>
-				</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="panel panel-default panel-primary">
-				  <div class="panel-body">
-				<p><b>ActiveCollab:</b> es un gestor de proyectos que se puede utilizar como producto y como servicio, aunque ambas modalidades son de pago. Dispone de diversas características que la tornan atractiva, como: Foros, hitos, checklists, ficheros, plantillas de proyectos, tickets, etc. Además, es compatible con dispositivos móviles. Una de las limitaciones es el idioma, la versión en inglés es la más utilizada.</p>
-				</div>
-				</div>
-			</div>
-		</div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="#">Home<span class="navbar-unread">1</span></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="blog.html">BLOG<span class="navbar-unread">1</span></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#">Noticias<span class="navbar-unread">1</span></a>
+                    </li>
+                   
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
 
-		<div class="row">
-			<div class="col-md-4">
-				<div class="panel panel-default panel-primary">
-				  <div class="panel-body">
-				<p><b>Teuxdeux:</b> es una aplicación gratuita, sencilla y de fácil uso. Más que un gestor de proyectos es, en verdad, un gestor de tareas que puede usarse para trabajo como en la vida personal. Agrupa las tareas en función al día en que pensamos efectuarlas, para después tacharlas una vez que las hayamos completado.</p>
-				</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="panel panel-default panel-primary">
-				  <div class="panel-body">
-				<p><b>Doolphy:</b> es una muy buena aplicación web, con una apariencia gráfica simple y muy fácil de usar. Con Doolphy es posible compartir información, archivos y documentos en cada proyecto, aunque no permite descripciones muy largas. Su principal ventaja es que permite hacer un seguimiento de los costes de cada proyecto.</p>
-				</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="panel panel-default panel-primary">
-				  <div class="panel-body">
-				<p><b>Pivotal Tracker:</b> es un servicio gratuito que tiene una marcada orientación a metodologías ágiles. Las tareas no son estimadas en horas, sino más bien en puntos, que establecen la velocidad del equipo. Se trata de una manera más humana de entender los proyectos. Puntos negativos: está completamente en inglés y es una cloud app, si no hay un enlace a la web no puede usarse.</p>
-				</div>
-				</div>
-			</div>
+    <!--Fin de la barra de navegacion-->
+   
+    <div class="container" >
+    	<div class="row">
+    		<div class="col-md-4">
+	    		<div class="tile">
+		            <img src="img/icons/svg/loop.svg" alt="Compas" class="tile-image big-illustration">
+		            <h3 class="tile-title">Informacion Personal</h3>
+		            <p>Mi nombre es Ediel Mendez Vasquez , soy de un pueblo que lleva por nombre Yaxe</p>
+		            <a class="btn btn-primary btn-large btn-block" >Leer Mas</a>
+	          	</div>
+           </div>
+    
+    		<div class="col-md-4">
+	    		<div class="tile">
+		            <img src="img/icons/svg/book.svg" alt="Compas" class="tile-image big-illustration">
+		            <h3 class="tile-title">Informacion Academica</h3>
+		            <p>Inice mis estudios de primaria en la primaria "El porvenir"de mi comunidad ,despues estudie la secundaria en la EST 56 en un pueblo vecino al mio.Mis estudios de nivel medio superior los realize en el CBTIS 150 de Ocotlán de Morelos .Ahora estudio la Licenciatura en Informatica En la universidad NovaUniversitas de Ocotlán de Morelos.</p>
+		            <a class="btn btn-primary btn-large btn-block" >Leer Mas</a>
+	          	</div>
+           </div>
+
+           <div class="col-md-4">
+	    		<div class="tile">
+		            <img src="img/icons/svg/chat.svg" alt="Compas" class="tile-image big-illustration">
+		            <h3 class="tile-title">Contacto</h3>
+		            <p>Twitter : @ediel_mendez</p>
+	          	</div>
+           </div>
+    
+    	</div>
 
 
-		</div>
-
-
-		<div class="row">
-			<div class="col-md-4">
-				<div class="panel panel-default panel-primary">
-				  <div class="panel-body">
-				<p><b>Trello,</b> que ofrece un organizador online, que se actualiza en tiempo real, en el que pueden crearse tarjetas que contengan las tareas a realizar.</p>
-				</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="panel panel-default panel-primary">
-				  <div class="panel-body">
-				<p> <b>Insight</b> representa un sistema de cuentas para tener un estricto control sobre el gasto de software. Tiene una versión gratuita para hasta 3 usuarios y está integrado en su totalidad con Google</p>
-				</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="panel panel-default panel-primary">
-				  <div class="panel-body">
-				    <p> <b>Achievo,</b> una aplicación gratuita muy enfocada a la gestión de trabajo de desarrollo y programación. Si bien, su implementación y administración es muy parecida a la mayoría de las aplicaciones de las que hemos hablado, no es una aplicación muy conocida.</p>
-				  </div>
-				</div>
-				
-			</div>
-
-		</div>
-	</div>
-	
-</body>
+    	<div class="footer">
+    		<p>Copyright 2015 Ediel</p>
+    	</div>
+    </div>
+    </body>
 </html>
