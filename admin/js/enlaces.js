@@ -5,6 +5,8 @@ $(document).ready(function(){
 		if(user){
 			//setData();
 			readData();	
+		}else{
+			window.location = "index.html";
 		}
 	});
 })
@@ -50,4 +52,12 @@ $(document).on('click',"#btn_guardar",function(){
 	setData(link,descripcion);
 	$("#txt_enlace").val("")
 	$("#txt_descripcion").val("");
+})
+
+$(document).on('click',"#btn_singout",function(){
+	firebase.auth().signOut().then(function() {
+	  console.log('Signed Out');
+	}, function(error) {
+	  console.error('Sign Out Error', error);
+	});
 })
