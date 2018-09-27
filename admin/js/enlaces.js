@@ -17,7 +17,7 @@ readData = function(){
 	starCountRef.on('value', function(snapshot) {
 		var arr = snapshot.val();
 		var arr2 = Object.keys(arr);
-		
+		$("#contenedor").empty();
 		for (var i = 0; i < arr2.length; i++) {
 			var key = arr2[i];
 			var child = "<div class='row'>"+
