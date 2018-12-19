@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta charset="UTF-8">
 	<title>Login</title>
 	<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-auth.js"></script>
@@ -21,7 +23,7 @@
 	  };
 	  firebase.initializeApp(config);
 	</script>
-	
+
 	<link rel="stylesheet" href="css/materialize.min.css">
 	<style type="text/css">
 		.container{
@@ -30,24 +32,44 @@
 	</style>
 </head>
 <body>
+	<div class="navbar-fixed">
+		<nav class="teal">
+		  <div class="nav-wrapper">
+			 <a href="#!" class="brand-logo">EMV Web Site</a>
+			 <ul class="right hide-on-med-and-down">
+				<li><a href="sass.html">Sass</a></li>
+				<li><a href="badges.html">Components</a></li>
+			 </ul>
+		  </div>
+		</nav>
+	 </div>
 <div class="container">
 	<div class="row">
-		<div class="input-field col s6">
-          <input placeholder="Placeholder" id="txt_email" type="text" class="validate" >
-          <label for="Email">Email</label>
-        </div>
+		<div class="col m6 offset-m3 col s12 red lighten-1" id="error-message" style="display:none;">
+			<p>Email o password incorrectos</p>
+		</div>
+
+		<div class="col m6 offset-m3 col s12">
+			<div class="input-field">
+	          <input placeholder="Email" id="txt_email" type="text" class="validate" >
+	          <label for="Email">Email</label>
+	      </div>
+		</div>
+		<div class="col m6 offset-m3 col s12">
+			<div class="input-field">
+				 <input placeholder="Password" id="txt_password" type="password" class="validate">
+				 <label for="Password">Password</label>
+			</div>
+		</div>
+		<div class="col m6 offset-m3 col s12">
+			<div class="input-field center-align">
+				 <a class="waves-effect waves-light btn" id="btnSingIn">SingIn</a>
+			</div>
+		</div>
+
+
 	</div>
-	<div class="row">
-		<div class="input-field col s6">
-          <input placeholder="Placeholder" id="txt_password" type="password" class="validate">
-          <label for="Password">Password</label>
-        </div>
-	</div>
-	<div class="row">
-		<div class="input-field col s6">
-          <a class="waves-effect waves-light btn" id="btnSingIn">SingIn</a>
-        </div>
-	</div>
+
 </div>
 
 

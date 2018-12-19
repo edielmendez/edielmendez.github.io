@@ -1,5 +1,6 @@
 $(document).ready(function(){
 	firebase.auth().onAuthStateChanged(function(user) {
+		
 		if(user){
 			window.location = "enlaces.html";
 		}
@@ -15,8 +16,16 @@ $(document).on('click',"#btnSingIn",function(){
 	  var errorCode = error.code;
 	  var errorMessage = error.message;
 
-	  // ...
-	  console.log(errorMessage);
-	  ;
+	  if(error){
+		  $("#error-message").show();
+	  }else{
+
+		  $("#error-message").removeClass("red lighten-1")
+		  .addClass("teal")
+		  .html("Accediendo ...")
+		  .show();
+	  }
+
+
 	});
 });
